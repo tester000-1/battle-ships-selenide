@@ -1,0 +1,19 @@
+package com.test.strategy;
+
+public enum GameStatus {
+
+    GAME_INIT,
+    CONNECTING_SERVER,
+    WAITING_FOR_OPPONENT,
+    STARTED_YOUR_TURN,
+    STARTED_OPPONENT_TURN,
+    YOUR_TURN,
+    OPPONENT_TURN,
+    OPPONENT_LEFT,
+    GAME_OVER_WIN,
+    GAME_OVER_LOSE,
+    SERVER_ERROR,
+    GAME_ERROR,
+    NOTIFICATION_REVIEW
+
+}
