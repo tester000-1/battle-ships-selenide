@@ -1,9 +1,11 @@
 package com.test.components;
 
 import com.codeborne.selenide.SelenideElement;
-import com.test.page.BasePage;
+import lombok.extern.slf4j.Slf4j;
 
-public class CheckboxImpl extends BasePage implements Checkbox {
+
+@Slf4j
+public class CheckboxImpl extends BaseComponent implements Checkbox {
 
     public CheckboxImpl(SelenideElement locator){
         super(locator);
@@ -16,6 +18,7 @@ public class CheckboxImpl extends BasePage implements Checkbox {
 
     @Override
     public boolean isCheckedElement() {
+        log.debug("Call isSelected on {}", locator);
         return locator.isSelected();
     }
 }

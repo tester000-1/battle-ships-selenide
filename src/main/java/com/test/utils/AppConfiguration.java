@@ -8,6 +8,7 @@ public class AppConfiguration {
     private String baseUrl;
     private String browserName;
     private Long timeout;
+    private Long opponentWaitDelay;
 
     public AppConfiguration(){
         setUpProperties();
@@ -20,6 +21,7 @@ public class AppConfiguration {
             baseUrl = properties.getProperty("BASE_URL");
             browserName = properties.getProperty("BROWSER_NAME");
             timeout = Long.valueOf(properties.getProperty("TIMEOUT"));
+            opponentWaitDelay = Long.valueOf(properties.getProperty("OPPONENT_WAIT_DELAY"));
             assert input != null;
         } catch (Exception ex) {
             ex.printStackTrace();
@@ -39,6 +41,11 @@ public class AppConfiguration {
     public Long getTimeout(){
         assert timeout != null;
         return timeout;
+    }
+
+    public Long getOpponentWaitDelay(){
+        assert opponentWaitDelay != null;
+        return opponentWaitDelay;
     }
 
 }

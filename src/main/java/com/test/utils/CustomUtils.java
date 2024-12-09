@@ -18,4 +18,6 @@ public class CustomUtils {
         return rn.nextInt(MAX_RANDOM_NUMBER - MIN_RANDOM_NUMBER + 1) + MIN_RANDOM_NUMBER;
     }
 
+    
+
 }

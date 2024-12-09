@@ -2,24 +2,15 @@ package com.test.page;
 
 
 import com.codeborne.selenide.SelenideElement;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
+import org.openqa.selenium.By;
 
-@Getter
-@AllArgsConstructor
+import static com.codeborne.selenide.Selenide.$;
+
+
 public abstract class BasePage {
 
-    protected SelenideElement locator;
-
-    public boolean isDisplayed(){
-        return locator.isDisplayed();
+    public SelenideElement getPageHeader() {
+        return $(By.xpath("//h1[@class='logo']"));
     }
 
-    public boolean isVisible(){
-        return locator.isDisplayed();
-    }
-
-    public void doClick(){
-        locator.click();
-    }
 }
